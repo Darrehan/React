@@ -1,1 +1,0 @@
-## conatct component props concecpt
