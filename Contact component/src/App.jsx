@@ -8,7 +8,7 @@ return (
 <Card
   Key={contact.Key}
   name={contact.name}
-  img={contact.imgURL}node
+  img={contact.imgURL}
   phone={contact.phone}
   email={contact.email}
 />
