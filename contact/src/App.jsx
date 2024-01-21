@@ -7,6 +7,7 @@ function createCard(contact)
 return (
 <Card
   Key={contact.Key}
+  // React maintains virtual Dom we cant output Key its default value setting for virtual dom
   name={contact.name}
   img={contact.imgURL}
   phone={contact.phone}

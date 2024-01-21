@@ -3,7 +3,8 @@ import './App.css'
 
 function App() {
    let now = new Date().toLocaleTimeString();
-  //  React useState hook
+  // React useState Hook
+  // Initial state 
    const [timebuddy, setTime] = useState(now);
    setInterval(gettime,1000);
   function gettime()
@@ -21,8 +22,6 @@ function App() {
 }
 
 export default App
-
-
 // import animals, { useAnimals } from "./data";
 
 // //Destructuring Arrays
@@ -61,24 +60,3 @@ export default App
 // const {
 //   coloursByPopularity: [teslaTopColour]
 // } = tesla;
-
-// ReactDOM.render(
-//   <table>
-//     <tr>
-//       <th>Brand</th>
-//       <th>Top Speed</th>
-//       <th>Top Colour</th>
-//     </tr>
-//     <tr>
-//       <td>{tesla.model}</td>
-//       <td>{teslaTopSpeed}</td>
-//       <td>{teslaTopColour}</td>
-//     </tr>
-//     <tr>
-//       <td>{honda.model}</td>
-//       <td>{hondaTopSpeed}</td>
-//       <td>{hondaTopColour}</td>
-//     </tr>
-//   </table>,
-//   document.getElementById("root")
-// );
