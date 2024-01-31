@@ -6,6 +6,7 @@ function App() {
   // React useState Hook
   // Initial state 
    const [timebuddy, setTime] = useState(now);
+  //  set interval inbuilt method automatically calls the gettime funtion after 1 sec
    setInterval(gettime,1000);
   function gettime()
   {
@@ -15,12 +16,12 @@ function App() {
   return (
 <div className="container">
 <h1> {timebuddy} </h1>
-<button onClick={gettime}>Get Time</button>
+<button onClick={gettime}>simple clock </button>
 </div>
   
   )
 }
-
+// we can have only one default export and we can have multiple variable export
 export default App
 // import animals, { useAnimals } from "./data";
 
@@ -39,21 +40,13 @@ export default App
 // // const { name = "Fluffy", sound = "Purr" } = cat;
 // // const {feedingRequirements: {food, water} } = cat;
 // // console.log(food);
-
-// CHALLENGE: uncomment the code below and see the car stats rendered
-// import React from "react";
-// import ReactDOM from "react-dom";
-// import cars from "./practice";
-
 // const [honda, tesla] = cars;
-
 // const {
 //   speedStats: { topSpeed: hondaTopSpeed }
 // } = honda;
 // const {
 //   speedStats: { topSpeed: teslaTopSpeed }
 // } = tesla;
-
 // const {
 //   coloursByPopularity: [hondaTopColour]
 // } = honda;
