@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import './App.css'
 import React, { useState } from "react";
 
@@ -10,30 +11,35 @@ function App() {
 
   function handleChange(event) {
     const { name, value } = event.target;
-
-    setContact(prevValue => {
-      if (name === "fName") {
-        return {
-          fName: value,
-          lName: prevValue.lName,
-          email: prevValue.email
-        };
-      } else if (name === "lName") {
-        return {
-          fName: prevValue.fName,
-          lName: value,
-          email: prevValue.email
-        };
-      } else if (name === "email") {
-        return {
-          fName: prevValue.fName,
-          lName: prevValue.lName,
-          email: value
-        };
-      }
+//  Here The arrow funtion is retaining previous values
+    setContact((prevValue) => {
+      // if (name === "fName") {
+      //   return {
+      //     fName: value,
+      //     lName: prevValue.lName,
+      //     email: prevValue.email
+      //   };
+      // } else if (name === "lName") {
+      //   return {
+      //     fName: prevValue.fName,
+      //     lName: value,
+      //     email: prevValue.email
+      //   };
+      // } else if (name === "email") {
+      //   return {
+      //     fName: prevValue.fName,
+      //     lName: prevValue.lName,
+      //     email: value
+      //   };
+      // }
+      // we can Do same thing with the help of spread operator
+    return{
+    ...prevValue,
+    // Here we are putting value inside array ES6 Module syntax
+    [name]:value
+    };
     });
   }
-
   return (
     <div className="container">
       <h1>
