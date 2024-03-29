@@ -8,7 +8,7 @@ const emojipedia = [
     },
     {
       id: 2,
-      emoji: "🙏",
+      emoji: "🙏 ",
       name: "Person With Folded Hands",
       meaning:
         "Two hands pressed together. Is currently very introverted, saying a prayer, or hoping for enlightenment. Is also used as a “high five” or to say thank you.",
