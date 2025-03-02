@@ -1,0 +1,57 @@
+[
+  {
+    "_id": {
+      "$oid": "6027d1fd8d4a543a2049d1a0"
+    },
+    "name": "Kazi",
+    "age": 30,
+    "gender": "male",
+    "isMarried": false,
+    "salary": 80000,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6027d22c7dd46d17c04bdf90"
+    },
+    "name": "Sharmin Afroz",
+    "age": 35,
+    "gender": "female",
+    "isMarried": true,
+    "salary": 100000,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6027d245cc9c6a2a5800440a"
+    },
+    "name": "MD. Saif Khan",
+    "age": 23,
+    "gender": "male",
+    "isMarried": false,
+    "salary": 25000,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6027d26084ae3612b8a59525"
+    },
+    "name": "Suraiya Khan Shifa",
+    "age": 60,
+    "gender": "female",
+    "isMarried": true,
+    "salary": 40000,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6027d27b8d92072d00f370b1"
+    },
+    "name": "Sumaiya Khan Sumi",
+    "age": 40,
+    "gender": "female",
+    "isMarried": true,
+    "salary": 45000,
+    "__v": 0
+  }
+]
