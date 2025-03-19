@@ -2,7 +2,7 @@
 import React from "react";
 import Login from "../component/Login";
 import "./App.css"
-//  simple login component
+//  simple login component by rehan
 var isLoggedIn = false;
 const currentTime = new Date(2024, 11, 1, 9).getHours();
 console.log(currentTime);
