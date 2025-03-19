@@ -1,74 +1,46 @@
-/* eslint-disable no-unused-vars */
 import './App.css'
-import React, { useState } from "react";
-
+import contacts from './user/contact'
+import Card from './components/Card';
+import Avatar from './components/Avatar';
+function createCard(contact)
+{
+return (
+<Card
+  Key={contact.Key}
+  // React maintains virtual Dom we cant output Key its default value setting for virtual dom
+  name={contact.name}
+  img={contact.imgURL}
+  phone={contact.phone}
+  email={contact.email}
+/>
+);
+}
 function App() {
-  const [contact, setContact] = useState({
-    fName: "",
-    lName: "",
-    email: ""
-  });
-
-  function handleChange(event) {
-    const { name, value } = event.target;
-//  Here The arrow funtion is retaining previous values
-    setContact((prevValue) => {
-      // if (name === "fName") {
-      //   return {
-      //     fName: value,
-      //     lName: prevValue.lName,
-      //     email: prevValue.email
-      //   };
-      // } else if (name === "lName") {
-      //   return {
-      //     fName: prevValue.fName,
-      //     lName: value,
-      //     email: prevValue.email
-      //   };
-      // } else if (name === "email") {
-      //   return {
-      //     fName: prevValue.fName,
-      //     lName: prevValue.lName,
-      //     email: value
-      //   };
-      // }
-      // we can Do same thing with the help of spread operator
-    return{
-    ...prevValue,
-    // Here we are putting value inside array ES6 Module syntax
-    [name]:value
-    };
-    });
-  }
   return (
-    <div className="container">
-      <h1>
-        Hello {contact.fName} {contact.lName}
-      </h1>
-      <p>{contact.email}</p>
-      <form>
-        <input
-          onChange={handleChange}
-          value={contact.fName}
-          name="fName"
-          placeholder="First Name"
-        />
-        <input
-          onChange={handleChange}
-          value={contact.lName}
-          name="lName"
-          placeholder="Last Name"
-        />
-        <input
-          onChange={handleChange}
-          value={contact.email}
-          name="email"
-          placeholder="Email"
-        />
-        <button>Submit</button>
-      </form>
+    <div>
+      <h1 className="heading">My Contacts</h1>
+      <Avatar
+      img="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg" />
+      {contacts.map(createCard)}
+      {/* <Card
+        name={contacts[0].name}
+        img={contacts[0].imgURL}
+        tel={contacts[0].phone}
+        email={contacts[0].email}
+      />
+      <Card
+        name={contacts[1].name}
+        img={contacts[1].imgURL}
+        tel={contacts[1].phone}
+        email={contacts[1].email}
+      />
+      <Card
+        name={contacts[2].name}
+        img={contacts[2].imgURL}
+        tel={contacts[2].phone}
+        email={contacts[2].email}
+      /> */}
     </div>
   );
 }
-
 export default App;
